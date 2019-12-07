@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import {TextToSpeech} from '@ionic-native/text-to-speech/ngx';
 
 @NgModule({
   imports: [
@@ -17,6 +18,9 @@ import { HomePage } from './home.page';
         component: HomePage
       }
     ])
+  ],
+  providers: [
+      TextToSpeech,
   ],
   declarations: [HomePage]
 })

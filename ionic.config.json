@@ -1,5 +1,7 @@
 {
   "name": "TSpeech",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

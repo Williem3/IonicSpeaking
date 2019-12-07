@@ -11,34 +11,40 @@
 
 <ion-content>
     <ion-card class="welcome-card">
-      <img src="/assets/shapes.svg" alt="" />
+      <img src="/assets/images/000-Text-to-Speech.png" alt="" />
       <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
+        <ion-card-subtitle>TSpeech</ion-card-subtitle>
+        <ion-card-title>Welcome to TSpeech</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        <p>TSpeech is a brand new application that allows your phone to speak out the words that you provide it. If you're
+        confused on pronunciation or want to give your friends and family a laugh then look no further! I hope you
+        have a blast with TSpeech!</p>
       </ion-card-content>
     </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+
+  <div class="speechWrapper">
+    <ion-item>
+      <ion-input class="wrapper" type="text" placeholder="Lets say something" [(ngModel)]="tSpeech"></ion-input>
+    </ion-item>
+
+    <ion-item class="wrapper">
+      <ion-label>Language</ion-label>
+      <ion-select [(ngModel)]="language">
+        <ion-select-option  value="en-US">English</ion-select-option>
+        <ion-select-option value="ru-RU">Russian</ion-select-option>
+        <ion-select-option value="en-GB">UK English</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-range [(ngModel)]="rate" step="0.25" snaps="true" ticks="true" min="1" max="2" color="secondary">
+        <ion-label slot="start">1</ion-label>
+        <ion-label slot="end">2</ion-label>
+      </ion-range>
+    </ion-item>
+    <ion-item class="btnWrapper">
+      <ion-button color="dark" expand="full" size="large" (click)="speak()">Speak!</ion-button>
+    </ion-item>
+  </div>
 </ion-content>

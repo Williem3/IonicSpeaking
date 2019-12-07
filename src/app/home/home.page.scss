@@ -2,3 +2,28 @@
   max-height: 35vh;
   overflow: hidden;
 }
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper ion-input {
+  border: #383a3e solid 1px;
+  background-color: #383a3e;
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.btnWrapper ion-button {
+  width: 100%;
+}
+ion-item {
+  margin-bottom: 7%;
+  margin-top: 6%;
+}

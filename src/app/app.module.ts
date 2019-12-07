@@ -8,6 +8,8 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import {TextToSpeech, TextToSpeechOriginal} from '@ionic-native/text-to-speech';
+
 
 @NgModule({
   declarations: [AppComponent],
